@@ -404,7 +404,7 @@ function check_if_internet_is_working_normally() {
 }
 
 function is_openvpn_currently_running() {
-  if [[ $(pgrep openvpn) == "" ]]; then
+  if [[ $(pgrep -x openvpn) == "" ]]; then
     echo false
   else
     echo true
